@@ -27,7 +27,7 @@
     
     NSNumber* median = [self getMedian:array];
     
-    __block NSMutableArray* derivationArray = [[NSMutableArray alloc] init];
+    NSMutableArray* derivationArray = [[NSMutableArray alloc] init];
     [array enumerateObjectsUsingBlock:^(NSNumber* obj, NSUInteger idx, BOOL *stop) {
         [derivationArray addObject:[NSNumber numberWithInt:abs([obj intValue]-[median intValue])]];
     }];
